@@ -5,12 +5,26 @@ import ConsoleUtils.ConColor;
 
 public class Program
 {
-	// Реализация худшего случая для сортировки пузырьком 
-	// для тестирования класса ConProgressBar
 	public static void main(String[] args)
 	{
 		try
 		{
+            // Пример использования класса ConProgressBar
+            ConProgressBar prBar = new ConProgressBar("myProgressBar", 10, 37);
+            prBar.setBackgroundColor(ConColor.ANSI_WHITE_BACKGROUND);
+            prBar.setForegroundColor(ConColor.ANSI_PURPLE);
+            System.out.println("\nПример #1:");
+            prBar.printControl();
+            System.out.println("\nПример #2:");
+            prBar = new ConProgressBar("myProgressBar", 30, 73);
+            prBar.setBackgroundColor(ConColor.ANSI_WHITE_BACKGROUND);
+            prBar.setForegroundColor(ConColor.ANSI_RED);
+            prBar.printControl();
+            System.out.println("\n");
+
+
+            // Реализация худшего случая для сортировки пузырьком 
+            // для тестирования класса ConProgressBar
 			ConProgressBar pb = new ConProgressBar("myProgressBar", 60, 0);
 			pb.setBackgroundColor(ConColor.ANSI_BLACK_BACKGROUND);
 			pb.setForegroundColor(ConColor.ANSI_GREEN);
